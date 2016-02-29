@@ -1,0 +1,42 @@
+/* Cards */
+i.morebutton {
+  position:absolute;
+  bottom:40px;
+  right:10px;
+}
+
+i.closebutton {
+  position:absolute;
+  top:10px;
+  right:10px;
+}
+
+.white-image {
+  /* Used to place a very slight bottom border on white images without affecting
+  layout */
+  box-shadow: 0 2px 1px -1px #ddd;
+}
+
+/* The welcome menu */
+.welcome, footer {
+  margin-bottom:0;
+  overflow:hidden;
+}
+
+.welcome p, footer p {
+  font-size:17px;
+}
+
+.welcome a, footer a {
+  color: #03a9f4; /* light-blue-text */
+}
+
+.nostyle {
+  color: #e1f5fe !important; /* light-blue-text text-lighten-5 */
+}
+
+.highlight {
+  color: #80d8ff; /* light-blue-text text-accent-1 */
+  background-color: #e1f5fe; /* light-blue lighten-5 */
+  font-size: 20px;
+}

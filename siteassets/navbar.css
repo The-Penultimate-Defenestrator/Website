@@ -1,0 +1,27 @@
+/* Styles for the reduced-height navbar*/
+
+nav {
+  height:50px;
+}
+
+div.navclass { /* Whole bar */
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  height:50px;
+}
+
+div.navclass span { /* Title */
+  font-size: 1.5rem;
+  margin-top: -5px;
+}
+
+div.navclass a { /* Links */
+  height: 50px;
+  line-height: 50px;
+}
+
+.navbar-fixed {
+  position:fixed;
+  top:0px !important;
+}
