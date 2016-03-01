@@ -41,8 +41,6 @@ function updateAge() {
   var isinview = (elembottom > top && elemtop < bottom && !document.hidden); // Element is onscreen?
   if (isinview) {
     agespan.text(getAge()); // Load current age into the span
-  } else {
-    console.log("Hidden");
   }
 
 }
