@@ -1,4 +1,5 @@
 var navispinned=false;
+var interval_id;
 
 // Fixes the navbar to the top of the page based on scroll distance
 function scrollFunc() {
@@ -53,6 +54,15 @@ $(document).ready(function() {
   // Scroll event for the navbar to be pinned after scrolling.
   $(window).scroll(scrollFunc);
   // Update my age every second that it's onscreen
-  window.setInterval(updateAge,1000);
-
+  interval_id = setInterval(updateAge,1000);
+  // Only update age when window is focused
+  $(window).focus(function () { // Start count when window is focused
+    if (!interval_id) {
+      interval_id = setInterval(updateAge,1000);
+    }
+  });
+  $(window).blur(function() { // Stop count when focus disappears
+    clearInterval(interval_id);
+    interval_id = 0;
+  });
 });
