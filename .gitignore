@@ -1,0 +1,8 @@
+files/*
+powerschool/*
+private/*
+pythonista-cloud/*
+sms/*
+wikipedia/*
+
+*.DS_Store
