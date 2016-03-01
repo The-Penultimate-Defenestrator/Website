@@ -38,10 +38,11 @@ function updateAge() {
   var bottom = top + $(window).height(); // Bottom of window
   var elemtop = agespan.offset().top; // Top of element
   var elembottom = elemtop+agespan.outerHeight(); // Bottom of element
-  var isinview = (elembottom > top && elemtop < bottom); // Element is onscreen?
-
+  var isinview = (elembottom > top && elemtop < bottom && !document.hidden); // Element is onscreen?
   if (isinview) {
     agespan.text(getAge()); // Load current age into the span
+  } else {
+    console.log("Hidden");
   }
 
 }
@@ -55,14 +56,4 @@ $(document).ready(function() {
   $(window).scroll(scrollFunc);
   // Update my age every second that it's onscreen
   interval_id = setInterval(updateAge,1000);
-  // Only update age when window is focused
-  $(window).focus(function () { // Start count when window is focused
-    if (!interval_id) {
-      interval_id = setInterval(updateAge,1000);
-    }
-  });
-  $(window).blur(function() { // Stop count when focus disappears
-    clearInterval(interval_id);
-    interval_id = 0;
-  });
 });
