@@ -1,0 +1,233 @@
+<!doctype HTML>
+
+<html>
+<head>
+  <title>District Technology Letter</title>
+  <style>
+    * {
+      font-family: sans-serif;
+    }
+
+    body {
+      margin: 0;
+    }
+    div.content-main {
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 40px;
+      margin: 0;
+      padding: 50px 20px;
+      background-color: #eee;
+      color: #445;
+    }
+    ol {
+      margin-bottom: 30px;
+    }
+    a {
+      color: #5a5;
+    }
+
+    /* Code styles */
+    pre, code {
+      background-color: #eee;
+      padding: 0 7px;
+      overflow: auto;
+    } pre {
+      padding: 20px;
+      padding
+    } code {
+      font-family: monospace;
+    } pre > code {
+      font-size: 1.15em;
+      padding: 0;
+    }
+
+    img {
+      display:block;
+      margin: 20px 0;
+      width: 100%;
+      max-width: 750px;
+      height: auto;
+    }
+
+    hr {
+      border: none;
+      border-bottom: 1px solid #bbb;
+    }
+  </style>
+</head>
+
+
+
+
+
+
+<body>
+
+<h1>More Computer Science-oriented Tools on School Computers</h1>
+
+<div class="content-main">
+
+<p>
+  Hi, I'm Luke Deen Taylor. I'm a technologically inclined New Paltz High School
+  freshman, I'll be taking AP Computer Science next year.
+
+  On behalf of myself and a few other students, I'd like to discuss the
+  possibility of installing more computer science-oriented tools on school
+  computers. Specifically, I'd love to see the following things available to
+  students:
+</p>
+
+<ol>
+  <li>
+    <h4>
+    Installation of an IDE besides Notepad++
+    </h4>
+
+    <p>
+    Many high school computers have Notepad++ as a code editor installed.
+    While Notepad++ is fine, it's a relatively antiquated text editor,
+    lacking many productivity features found commonly in more modern text editors.
+    Editors like <a href="https://atom.io">Atom</a> feature code-completion, advanced syntax highlighting, and more
+    out of the box. Atom also has linters available for languages such as JavaScript,
+    which can help prevent mistakes in writing code by identifying them before
+    execution time. I'd love to see Atom installed system-wide in coming years.
+    </p>
+  </li>
+
+
+  <li>
+    <h4>
+      Installation of other browsers besides Internet Explorer
+    </h4>
+    <p>
+      Keith in the IT department may remember being called by Dr. Weisenthal last
+      year about installing Chrome on school computers. From what I can see, a
+      halfhearted attempt was subsequently made to block its installation by
+      blacklisting the <code>chrome.google.com</code> domain. However, Internet
+      Explorer remains an awful, non-standards-compliant browser. It doesn't
+      support many of the features of the modern web. Browsers such as Chrome
+      not only offer a full, standards-compliant implementation of HTML, CSS
+      and JavaScript, but also offer debugging tools far beyond the capabilities
+      of those found in IE. Having
+      <a href="https://google.com/chrome/">Google Chrome</a> installed on school
+      computers would be very helpful
+      (<a href="https://en.wikipedia.org/wiki/Don%27t_be_evil">it's not evil</a>).
+    </p>
+  </li>
+
+  <li>
+    <h4>
+      Relaxation of computer AUP
+    </h4>
+    <p>
+      The district has a computer acceptable use policy, designed to protect the security
+      of district computers. However, this policy is, in my opinion, unnecessarily restrictive
+      in several places.
+    </p>
+    <p>
+      The computer use policy has not been modified or updated in several years to reflect how
+      students need to use technology today. At least two of these rules are worded such that
+      they are violated by normal, reasonable computer use. For example, launching Internet Explorer
+      and conducting a Google search explicitly violates the rules stating that users may not:
+
+      <pre>25. Run or copy executable programs for any drive on any of the district's computers
+27. Send messages from one computer to another via the LAN or WAN
+ 9. Complete and/or submit forms found on websites without permission</pre>
+
+      The act of launching internet explorer involves running an executable program for a drive on
+      a district computer. Furthermore, navigating to any webpage on the internet, by definition,
+      involves sending a message from one computer to another over "the WAN." Lastly, conducting a
+      search involves completing and submitting a form found on a website. In fact, Google's input
+      mechanism explicitly uses a HTML <code> &lt;form&gt;</code> element:
+      <img alt="form" src="http://i.imgur.com/OE75CHf.png" />
+    </p>
+    <p>
+      The district's computer policies cannot be expected to be taken seriously when they clearly
+      prevent normal computer use.
+    </p>
+    <p>
+      In addition to the clear mistakes in the policy, there are several rules that I feel are overly
+      restrictive. For example, rule 24 states:
+      <pre>24. Load software or executable files of any kind onto any of the district's computers or network server</pre>
+      This rule, is, in my opinion, unnecessary. Without access to adminstrator privelages, no programs
+      could be loaded which would inflict actual damage to the computers or the network, at least not without
+      violating the rule:
+      <pre>3. Create and/or place a computer virus onto any computer</pre>
+      I think the computer AUP should undergo a much-needed update sometime very soon.
+    </p>
+  </li>
+
+  <li>
+    <h4>
+      Basic, non-admin command line access
+    </h4>
+    <p>
+      While Windows is built on top of a graphical interface, familiarity with a basic
+      command-line interface is an essential tool for students hoping to become developers.
+      Currently, placing <code>cmd</code> in a <code>.bat</code> file and double-clicking
+      it displays the message:
+      <pre><code>The command prompt has been disabled by your administrator.
+Press any key to continue . . .</code></pre>
+      this restriction can be easily circumvented by a loop in the batch file:
+      <pre><code>@echo off
+:loop
+set /P cmd="> "
+%cmd%
+goto :loop</code></pre>
+      which simply passes user input to the command line, simulating an interactive shell:
+      <img alt="cmd" src="http://i.imgur.com/Z420Ylq.png"/>
+      Allowing non-admin command-line access would be hugely beneficial to students while
+      not actually opening up any new security issues. This addition would not expose new
+      functionality, but rather make information (which is already available) accessible
+      in a much more powerful way.
+    </p>
+  </li>
+
+  <li>
+    <h4>
+      Installation of Git
+    </h4>
+    <p>
+      While many computer science students would not take advantage of a
+      version-control system such as git, since it is not a part of the curriculum,
+      such software has enormous potential to transform code workflows.
+    </p>
+  </li>
+
+</ol>
+
+<p>
+  I'd love to discuss these posibilities. Are there reasons why any of these
+  could or could not be put in place? I'm open to feedback on these ideas.
+</p>
+
+<hr/>
+
+<h2> Contact </h2>
+
+<p>
+  You can get in touch with me at
+  <a href="mailto:luke@deentaylor.com?subject=Resources%20For%20Computer%20Science%20Students">
+    luke@deentaylor.com</a>. I respond to emails swiftly.
+</p>
+
+</div>
+
+
+
+<!--
+<h1>B. Status of BYOD programs</h1>
+
+<p>There have long been wifi networks in the district that mention a Bring
+Your Own Device program. What is the status of such a project? Is this a program
+planned for the future? </p>
+<img src="http://i.imgur.com/h32Vkbg.jpg"/> -->
+
+
+</body>
+</html>
