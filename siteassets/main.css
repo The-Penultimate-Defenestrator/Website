@@ -1,14 +1,17 @@
+code {
+  background-color: #eee;
+}
 /* Cards */
 i.morebutton {
-  position:absolute;
-  bottom:40px;
-  right:10px;
+  position: absolute;
+  bottom: 40px;
+  right: 10px;
 }
 
 i.closebutton {
-  position:absolute;
-  top:10px;
-  right:10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
 .white-image {
@@ -18,16 +21,19 @@ i.closebutton {
 }
 
 /* The welcome menu */
-.welcome, footer {
-  margin-bottom:0;
-  overflow:hidden;
+.welcome,
+footer {
+  margin-bottom: 0;
+  overflow: hidden;
 }
 
-.welcome p, footer p {
-  font-size:17px;
+.welcome p,
+footer p {
+  font-size: 17px;
 }
 
-.welcome a, footer a {
+.welcome a,
+footer a {
   color: #03a9f4; /* light-blue-text */
 }
 
