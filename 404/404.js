@@ -20,7 +20,6 @@ window.onload = function() {
     content.style.fontSize = randint(20, 150)+"px";        //   Random font size (20 to 150 px)
     content.style.opacity = (Math.random()/10).toFixed(2); //   Random opacity (0.00 to 0.10)
     content.style.fontWeight = randint(1, 6) * 100;        //   Random font weight (200 to 500)
-    console.log(content)
     // Add the div
     layer.appendChild(content);
 
@@ -31,4 +30,4 @@ window.onload = function() {
   // Initialize the scene
   var parallax = new Parallax(scene);
 
-}
+};
